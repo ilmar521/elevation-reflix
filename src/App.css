@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,156 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.unactive{
+  display: none;
+}
+
+.App {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 0 2%;
+}
+
+
+.header {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-container {
+  display: flex;
+  gap: 10px;
+}
+
+.main {
+  height: 100%;
+}
+
+._btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+._btn:active:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  position: absolute;
+  top: 0;
+}
+
+.logo {
+  color: #61d5e2;
+}
+
+.home-title {
+  text-align: center;
+}
+
+.users-container {
+  display: flex;
+  margin: 0 15%;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .users-container {
+    flex-direction: column;
+  }
+}
+
+.user-container {
+}
+
+.user-btn {
+  width: 150px;
+  height: 90px;
+}
+
+.blue {
+  background-color: #3498db;
+}
+
+.red {
+  background-color: #e74c3c;
+}
+
+.green {
+  background-color: #2ecc71;
+}
+
+.yellow {
+  background-color: #f1c40f;
+}
+
+.catalog-bar-component {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance-container {
+  display: flex;
+  gap: 10px;
+}
+
+.movies-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.movie-container {
+  width: calc(25% - 10px);
+  position: relative;
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  color: black;
+  background-color: white;
+  position: absolute;
+  border-radius: 100%;
+  border: 1px solid black;
+  top: 0;
+  right: 0;
+}
+
+
+.movie-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin: 5%;
+}
+
+.movie-description-container > img {
+  width: 25%;
 }
