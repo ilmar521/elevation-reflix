@@ -14,7 +14,7 @@ export default function CatalogBar({ usersData, setUsersData }) {
     }
 
     fetchMoviesData();
-  }, [searchValue, usersData, setUsersData]);
+  }, [searchValue]);
 
   return (
     <div className="catalog-bar-component">

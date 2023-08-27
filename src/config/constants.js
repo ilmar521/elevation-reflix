@@ -47,6 +47,7 @@ export const UsersData = {
   activeUserId: 0,
   moviesList: [],
 
+
   getActiveUser() {
     return (
       this.users.find((u) => u.id === this.activeUserId) || {
@@ -54,6 +55,18 @@ export const UsersData = {
         balance: 0,
         rentedMovies: [],
       }
-    );
+    )
   },
+
+  movieRented(movieId, userId = this.activeUserId) {
+    let user = this.users.find((u) => u.id === userId) || {
+      name: "None",
+      balance: 0,
+      rentedMovies: [],
+    };
+    return user.rentedMovies.filter(
+      (rentedMovie) => rentedMovie.id == movieId
+    ).length != 0;  
+  }
+
 };

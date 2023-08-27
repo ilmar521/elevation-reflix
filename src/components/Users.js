@@ -10,6 +10,7 @@ export default function Users({ usersData, setUsersData }) {
             userData={user}
             colorClass={user.color}
             setUsersData={setUsersData}
+            key={user.id}
           />
         ))}
     </div>

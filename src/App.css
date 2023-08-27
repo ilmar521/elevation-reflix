@@ -67,6 +67,7 @@
   border: none;
   padding: 0;
   position: relative;
+  font-size: 20px;
 }
 
 ._btn:active:after {
@@ -94,8 +95,8 @@
 .users-container {
   display: flex;
   margin: 0 15%;
-  justify-content: space-around;
-  gap: 10px;
+  justify-content: center;
+  gap: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,12 +105,15 @@
   }
 }
 
-.user-container {
-}
-
 .user-btn {
   width: 150px;
   height: 90px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+.user-btn:hover {
+  transform: scale(1.1);
 }
 
 .blue {
@@ -131,11 +135,31 @@
 .catalog-bar-component {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.catalog-header {
+  margin-bottom: 10px;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+input {
+  width: 30%;
+  height: 20px;
 }
 
 .balance-container {
   display: flex;
   gap: 10px;
+  font-size: 16px;
+}
+
+.catalog-container {
+  font-size: 16px; 
 }
 
 .movies-container {
@@ -156,6 +180,7 @@
   width: 100%;
   height: auto;
   display: block;
+  
 }
 
 .icon {
@@ -169,8 +194,12 @@
   border: 1px solid black;
   top: 0;
   right: 0;
+  transition: transform 0.3s ease;
 }
 
+.icon:hover {
+  transform: scale(1.1);
+}
 
 .movie-description-container {
   display: flex;

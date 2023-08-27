@@ -7,7 +7,7 @@ export default function Catalog({ usersData, setUsersData }) {
       <CatalogBar usersData={usersData} setUsersData={setUsersData} />
       {usersData.getActiveUser().rentedMovies.length !== 0 ? (
         <div className="catalog-container__rented">
-          <div>Rented:</div>
+          <div className="catalog-header">Rented:</div>
           <Movies
             usersData={usersData}
             setUsersData={setUsersData}
@@ -17,7 +17,7 @@ export default function Catalog({ usersData, setUsersData }) {
       ) : null}
 
       <div className="catalog-container__all">
-        <div>Catalog:</div>
+        <div className="catalog-header">Catalog:</div>
         <Movies
           usersData={usersData}
           setUsersData={setUsersData}
