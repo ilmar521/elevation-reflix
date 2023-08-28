@@ -10,6 +10,7 @@ import { UsersData, } from "./config/constants";
 
 function App() {
   const [usersData, setUsersData] = useState(UsersData);
+
   return (
     <Router>
       <div className="App">

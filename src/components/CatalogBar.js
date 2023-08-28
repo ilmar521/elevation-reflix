@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Balance from "./Balance";
-import fetchMovies from "../requests/apiDataProvider";
+import fetchMovies from "../requests/fetchMovies";
 import { popularMoviesLink, searchMoviesLink } from "../config/constants";
 
 export default function CatalogBar({ usersData, setUsersData }) {

@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { imgMovieLink } from "../config/constants";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+
 const movieCost = 1;
 
-export default function Movie({ movie, usersData, setUsersData }) {
+export default function Movie({ movie, usersData, setUsersData, setModal, setRentedMovie}) {
+
   function handleRentClick() {
     const activeUser = usersData.getActiveUser();
 
@@ -46,6 +48,8 @@ export default function Movie({ movie, usersData, setUsersData }) {
             (movieFromList) => movieFromList.id != movie.id
           ),
         });
+        setRentedMovie(movie.original_title)
+        // setModal(true)
       }
     }
   }
